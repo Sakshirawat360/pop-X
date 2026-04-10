@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+body{
+  margin:0;
+  background:#f6f6f6;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* .container{
+  max-width: 400px;
+  margin: auto;
+  min-height: 100vh;
+  background: white;
+  padding: 25px;
+} */
