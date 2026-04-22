@@ -56,12 +56,12 @@ const Register = () => {
                 <h1 className='font-bold text-3xl mb-4'>Create your popX account</h1>
                 <fieldset className='border-2 border-gray-300 px-3 py-1 rounded-lg mb-5'>
                     <legend className='text-sm text-purple-600 px-1 font-semibold'>Full Name <span className="text-red-500">*</span></legend>
-                    <input name='fullname'  value={formdata.fullname} onChange={handlechange} onFocus={handlefocus} onBlur={handleblur} className='w-full outline-none' type="text" placeholder='Marry Deo'/>
+                    <input name='fullname'  value={formdata.fullname} onChange={handlechange} onFocus={handlefocus} onBlur={handleblur} className='w-full outline-none' type="text" placeholder='Marry Deo' required/>
                 </fieldset>
                 
                  <fieldset className='border-2 border-gray-300  px-3 py-1  rounded-lg mb-5'>
                     <legend className='text-sm text-purple-600 px-1 font-semibold'>Phone number <span className="text-red-500">*</span></legend>
-                    <input name='phone' value={formdata.phone} onChange={handlechange} onFocus={handlefocus} onBlur={handleblur} className='w-full outline-none' type="number" placeholder='Marry Deo'/>
+                    <input name='phone' value={formdata.phone} onChange={handlechange} onFocus={handlefocus} onBlur={handleblur} className='w-full outline-none' type="number" placeholder='Marry Deo' required/>
                 </fieldset>
                  <fieldset className='border-2 border-gray-300 px-3 py-1  rounded-lg mb-5'>
                     <legend className='text-sm text-purple-600 px-1 font-semibold'>Email address <span className="text-red-500">*</span></legend>
@@ -69,21 +69,21 @@ const Register = () => {
                 </fieldset>
                  <fieldset className='border-2 border-gray-300 px-3 py-1  rounded-lg mb-5'>
                     <legend className='text-sm text-purple-600 px-1 font-semibold'>Password <span className="text-red-500">*</span></legend>
-                    <input  name='password' value={formdata.password} onChange={handlechange} onFocus={handlefocus} onBlur={handleblur} className='w-full outline-none' type="password" placeholder='Marry Deo' minLength={8}/>
+                    <input  name='password' value={formdata.password} onChange={handlechange} onFocus={handlefocus} onBlur={handleblur} className='w-full outline-none' type="password" placeholder='Marry Deo' minLength={8} required/>
                 </fieldset>
                 <fieldset className='border-2 border-gray-300  px-3 py-1 rounded-lg mb-5'>
                     <legend className='text-sm text-purple-600 px-1 font-semibold'>Company Name</legend>
-                    <input name='company' value={formdata.company} onChange={handlechange} onFocus={handlefocus} onBlur={handleblur} className='w-full outline-none' type="text" placeholder='Marry Deo'/>
+                    <input name='company' value={formdata.company} onChange={handlechange} onFocus={handlefocus} onBlur={handleblur} className='w-full outline-none' type="text" placeholder='Marry Deo' required/>
                 </fieldset>
                 
-                <div className='mb-5'>
+                <div className='mb-5' >
                     <p className='txt-sm mb-2'>Are you an Agency? <span className='text-red-500'>*</span></p>
                     <div className="flex items-center gap-6">
     
                 <label className="flex items-center gap-2 cursor-pointer">
-                <input value="yes" checked={formdata.agency==="yes"}  name='agency' onChange={handlechange}
+                <input value="yes" checked={formdata.agency==="yes"}  name='agency' onChange={handlechange} required
         type="radio"
-        className="accent-purple-600 w-4 h-5"
+        className="accent-purple-600 w-4 h-5" 
       />
       Yes
                 </label>
@@ -92,7 +92,7 @@ const Register = () => {
       <input
         type="radio" value="no" checked={formdata.agency==="no"}
         name='agency' onChange={handlechange}
-        className="accent-purple-600 w-4 h-5"
+        className="accent-purple-600 w-4 h-5" required
       />
       No
     </label>
